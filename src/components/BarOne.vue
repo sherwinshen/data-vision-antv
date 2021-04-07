@@ -9,7 +9,7 @@
 
 <script>
 import { Column } from '@antv/g2plot'
-import industry from '@/data/industry'
+import data from '@/data/data1'
 
 export default {
   name: 'BarOne',
@@ -28,7 +28,7 @@ export default {
   methods: {
     // 初始化
     initChart () {
-      const initData = industry[2019]
+      const initData = data[2019]
       const initOption = {
         data: initData,
         autoFit: true,
@@ -94,7 +94,7 @@ export default {
     },
     // 更新
     updateChart (type) {
-      this.chart.changeData(industry[type])
+      this.chart.changeData(data[type])
     },
     // 页面自适应
     screenAdapter () {
