@@ -18,13 +18,19 @@ body {
 }
 
 .screen-container {
-  position: absolute;
+  min-width: 1024px;
+  max-width: 1920px;
+  height: 100%;
+  width: 100%;
+  position: relative;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   background: url(~@/assets/images/bg.jpg) no-repeat;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
 }
 
 .screen-header {
@@ -32,6 +38,7 @@ body {
   height: 1.25rem;
   background: url(~@/assets/images/head_bg.png) no-repeat top center;
   background-size: 100% 100%;
+  flex: 0 1 1.25rem;
 
   h1 {
     font-size: 0.475rem;
@@ -52,12 +59,14 @@ body {
 
 
 .screen-main {
-  min-width: 1024px;
-  max-width: 1920px;
-  padding: 0.125rem 0.125rem 0;
+  margin: 0.125rem 0.125rem 0;
+  flex: auto;
   display: flex;
 
   .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     flex: 3;
 
     &:nth-child(2) {
@@ -71,7 +80,6 @@ body {
   height: 3.875rem;
   border: 1px solid rgba(25, 186, 139, 0.17);
   background: rgba(255, 255, 255, 0.04) url(~@/assets/images/line.png);
-  padding: 0 0.1875rem 0.5rem;
   margin-bottom: 0.1875rem;
 
   &::before {
@@ -95,4 +103,24 @@ body {
     border-top: 2px solid #02a6b5;
     border-right: 2px solid #02a6b5;
   }
+
+  .chart {
+    height: 3rem;
+  }
 }
+
+.chart-title {
+  height: 0.6rem;
+  line-height: 0.6rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.25rem;
+  font-weight: 400;
+
+  span {
+    color: #fff;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
