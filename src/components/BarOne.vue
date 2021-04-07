@@ -1,7 +1,7 @@
 <template>
   <div class="chart-container">
     <h2 class="chart-title">
-      就业行业 —— <span @click="updateChart(2019)">2019</span>/<span @click="updateChart(2020)">2020</span>
+      柱状图 —— <span @click="updateChart(2019)">One</span>/<span @click="updateChart(2020)">Two</span>
     </h2>
     <div ref="chart" class="chart"></div>
   </div>
@@ -37,7 +37,7 @@ export default {
         maxColumnWidth: 20,
         xField: 'title',
         yField: 'num',
-        color: '#3089cf',
+        color: '#3fa8ff',
         xAxis: {
           nice: true,
           label: {
@@ -98,7 +98,7 @@ export default {
     },
     // 页面自适应
     screenAdapter () {
-      this.chart.changeSize(document.getElementsByClassName('screen-main')[0].clientWidth * 3 / 11)
+      // this.chart.changeSize(document.getElementsByClassName('screen-main')[0].clientWidth * 3 / 11)
     }
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="chart-container">
     <h2 class="chart-title">
-      人数变化图
+      折线图
     </h2>
     <div ref="chart" class="chart"></div>
   </div>
@@ -40,6 +40,7 @@ export default {
       })
       const initOption = {
         data: initData,
+        autoFit: true,
         xField: 'year',
         yField: 'value',
         seriesField: 'type',

@@ -1,7 +1,7 @@
 <template>
   <div class="chart-container">
     <h2 class="chart-title">
-      商品占比
+      条形图
     </h2>
     <div ref="chart" class="chart"></div>
   </div>
@@ -38,6 +38,12 @@ export default {
         legend: false,
         colorField: 'sales',
         color: ['#1089E7', '#F57474', '#56D0E3', '#F8B448', '#8B78F6'],
+        interactions: [
+          {
+            type: 'active-region',
+            enable: false
+          }
+        ],
         barStyle: {
           radius: [20, 20, 20, 20]
         },
@@ -76,7 +82,7 @@ export default {
     },
     // 页面自适应
     screenAdapter () {
-      this.chart.changeSize(document.getElementsByClassName('screen-main')[0].clientWidth * 3 / 11)
+      // this.chart.changeSize(document.getElementsByClassName('screen-main')[0].clientWidth * 3 / 11)
     }
   }
 }
