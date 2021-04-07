@@ -17,12 +17,8 @@
         </div>
       </div>
       <div class="column">
-        <div class="number">
-          <Number/>
-        </div>
-        <div class="map">
-          <Map/>
-        </div>
+        <Number/>
+        <Map/>
       </div>
       <div class="column">
         <div class="panel">

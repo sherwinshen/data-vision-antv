@@ -20,14 +20,8 @@ body {
 .screen-container {
   min-width: 1024px;
   max-width: 1920px;
-  height: 100%;
-  width: 100%;
-  position: relative;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: url(~@/assets/images/bg.jpg) center no-repeat ;
+  min-height: 100vh;
+  background: url(~@/assets/images/bg.jpg) center no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -121,6 +115,139 @@ body {
     color: #fff;
     cursor: pointer;
     text-decoration: underline;
+  }
+}
+
+.column:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0.125rem 0.1875rem;
+}
+
+.number {
+  flex: 1;
+  background: rgba(101, 132, 226, 0.1);
+  padding: 0.1875rem;
+
+  .no-hd {
+    position: relative;
+    border: 1px solid rgba(25, 186, 139, 0.17);
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 10px;
+      border-top: 2px solid #02a6b5;
+      border-left: 2px solid #02a6b5;
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 10px;
+      border-bottom: 2px solid #02a6b5;
+      border-right: 2px solid #02a6b5;
+      right: 0;
+      bottom: 0;
+    }
+
+    ul {
+      text-align: center;
+      display: flex;
+    }
+
+    li {
+      flex: 1;
+      height: 1rem;
+      line-height: 1rem;
+      font-size: 0.875rem;
+      color: #ffeb7b;
+      padding: 0.05rem 0;
+      font-family: electronicFont, serif;
+      font-weight: bold;
+      position: relative;
+
+      &:first-child::after {
+        content: "";
+        position: absolute;
+        height: 50%;
+        width: 1px;
+        background: rgba(255, 255, 255, 0.2);
+        right: 0;
+        top: 25%;
+      }
+    }
+  }
+
+  .no-bd ul {
+    display: flex;
+
+    li {
+      flex: 1;
+      height: 0.5rem;
+      line-height: 0.5rem;
+      text-align: center;
+      font-size: 0.225rem;
+      color: rgba(255, 255, 255, 0.7);
+      padding-top: 0.125rem;
+    }
+  }
+}
+
+.map {
+  position: relative;
+  height: 10.125rem;
+
+  .map1, .map2, .map3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: 100% 100% !important;
+    opacity: 0.3;
+  }
+
+  .map1 {
+    width: 6.475rem;
+    height: 6.475rem;
+    background: url(~@/assets/images/map.png);
+  }
+
+  .map2 {
+    width: 8.0375rem;
+    height: 8.0375rem;
+    background-image: url(~@/assets/images/lbx.png);
+    z-index: 2;
+    animation: rotate 15s linear infinite;
+  }
+
+  .map3 {
+    width: 7.075rem;
+    height: 7.075rem;
+    background-image: url(~@/assets/images/jt.png);
+    animation: rotate1 10s linear infinite;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes rotate1 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
   }
 }
 

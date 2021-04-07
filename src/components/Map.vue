@@ -1,6 +1,8 @@
 <template>
-  <div>
-
+  <div class="map">
+    <div class="map1"></div>
+    <div class="map2"></div>
+    <div class="map3"></div>
   </div>
 </template>
 
