@@ -9,6 +9,9 @@
   },
   "dependencies": {
     "@antv/g2plot": "^2.3.17",
+    "@antv/l7": "^2.3.9",
+    "@antv/l7-district": "^2.3.1",
+    "@antv/l7-maps": "^2.3.9",
     "core-js": "^3.6.5",
     "lib-flexible": "^0.3.2",
     "vue": "^2.6.11",

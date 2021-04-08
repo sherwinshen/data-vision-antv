@@ -212,6 +212,7 @@ body {
   }
 
   .map1 {
+    z-index: 1;
     width: 6.475rem;
     height: 6.475rem;
     background: url(~@/assets/images/map.png);
@@ -226,11 +227,29 @@ body {
   }
 
   .map3 {
+    z-index: 3;
     width: 7.075rem;
     height: 7.075rem;
     background-image: url(~@/assets/images/jt.png);
     animation: rotate1 10s linear infinite;
   }
+
+  .map-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 40px;
+    z-index: 100;
+
+    .chart {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+  }
+
 }
 
 @keyframes rotate {
